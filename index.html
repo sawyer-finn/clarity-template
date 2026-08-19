@@ -1,93 +1,66 @@
-/* Core Styling Variables */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --accent-color: #0066cc; /* Choose your single neon/bold accent color here */
-    --muted-color: #666666;
-    --font-heading: 'Poppins', -apple-system, sans-serif;
-    --font-body: 'Charter', Georgia, serif;
-}
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-body);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Software Engineer</title>
+    <!-- Clarity's signature clean typography imports -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.wrapper {
-    max-width: 680px; /* Perfect scanning layout reading width */
-    margin: 0 auto;
-    padding: 60px 20px;
-}
+    <main class="wrapper">
+        <!-- HEADER SECTION -->
+        <header class="hero">
+            <h1 class="name">Your Name</h1>
+            <p class="subtitle">Software Engineer specializing in [Your Focus, e.g., Backend Cloud Systems / Distributed Data]</p>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank">GitHub</a> / 
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a> / 
+                <a href="mailto:your.email@example.com">Email</a>
+            </div>
+        </header>
 
-.hero h1 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
+        <hr class="divider">
 
-.subtitle {
-    font-size: 1.1rem;
-    color: var(--muted-color);
-    margin-top: 0;
-}
+        <!-- BIO SECTION -->
+        <section class="content-block">
+            <h2>About Me</h2>
+            <p>
+                Write a high-density, 3-sentence summary of your technical background here. Focus on the core engineering problems you love solving, the environments you are comfortable navigating, and what you are building right now.
+            </p>
+        </section>
 
-.social-links a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-}
+        <!-- PROJECTS SECTION -->
+        <section class="content-block">
+            <h2>Selected Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <h3><a href="#" target="_blank">Project Name One ↗</a></h3>
+                    <p class="project-tech">Go / Redis / Docker</p>
+                    <p class="project-desc">A high-throughput distributed task queue built to handle concurrent execution chains with microsecond polling latencies.</p>
+                </div>
 
-.social-links a:hover {
-    text-decoration: underline;
-}
+                <div class="project-card">
+                    <h3><a href="#" target="_blank">Project Name Two ↗</a></h3>
+                    <p class="project-tech">TypeScript / Next.js / PostgreSQL</p>
+                    <p class="project-desc">An open-source telemetry dashboard that tracks and visualizes server runtime statistics using real-time WebSockets.</p>
+                </div>
 
-.divider {
-    border: 0;
-    border-top: 1px solid #e1e1e1;
-    margin: 40px 0;
-}
+            </div>
+        </section>
 
-.content-block h2 {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    border-bottom: 1px solid #eeeeee;
-    padding-bottom: 5px;
-    margin-top: 40px;
-}
+        <!-- TECHNICAL EXPERIENCE MATRIX -->
+        <section class="content-block">
+            <h2>Technical Stack</h2>
+            < flex class="stack-list">
+                <p><strong>Languages:</strong> Go, TypeScript, Python, SQL, Elisp</p>
+                <p><strong>Tools & Infra:</strong> AWS, Docker, Git, Linux, Vercel, PostgreSQL</p>
+            </flex>
+        </section>
+    </main>
 
-.project-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.project-card h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.15rem;
-}
-
-.project-card h3 a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.project-card h3 a:hover {
-    color: var(--accent-color);
-}
-
-.project-tech {
-    font-family: monospace;
-    font-size: 0.85rem;
-    color: var(--muted-color);
-    margin: 0 0 8px 0;
-}
-
-.project-desc {
-    margin: 0;
-    color: #333333;
-}
+</body>
+</html>
