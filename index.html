@@ -1,66 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Software Engineer</title>
-    <!-- Clarity's signature clean typography imports -->
+    <title>Your Name | Personal Website</title>
+
+    <!-- Signature Fonts for Clarity -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="wrapper">
-        <!-- HEADER SECTION -->
-        <header class="hero">
-            <h1 class="name">Your Name</h1>
-            <p class="subtitle">Software Engineer specializing in [Your Focus, e.g., Backend Cloud Systems / Distributed Data]</p>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank">GitHub</a> / 
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a> / 
+    <!-- SIDEBAR COVER LAYOUT -->
+    <div id="cover">
+        <div id="cover-text">
+            <h1 id="name">Your Name</h1>
+            <p id="title">Software Engineer</p>
+            <p id="affiliation">Independent Developer</p>
+
+            <div id="social-links">
+                <a href="https://github.com" target="_blank">GitHub</a><br>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
                 <a href="mailto:your.email@example.com">Email</a>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <hr class="divider">
+    <!-- MAIN BODY GRID CONTENT -->
+    <div id="main">
 
-        <!-- BIO SECTION -->
-        <section class="content-block">
-            <h2>About Me</h2>
+        <div class="section">
             <p>
-                Write a high-density, 3-sentence summary of your technical background here. Focus on the core engineering problems you love solving, the environments you are comfortable navigating, and what you are building right now.
+                I am a software engineer focused on building robust backend systems, distributed architectures, and developer tools. I love optimizing infrastructure, writing clean code, and working on open-source tools.
             </p>
-        </section>
+        </div>
 
-        <!-- PROJECTS SECTION -->
-        <section class="content-block">
-            <h2>Selected Projects</h2>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <h3><a href="#" target="_blank">Project Name One ↗</a></h3>
-                    <p class="project-tech">Go / Redis / Docker</p>
-                    <p class="project-desc">A high-throughput distributed task queue built to handle concurrent execution chains with microsecond polling latencies.</p>
+        <div class="section">
+            <div class="section-title">Selected Projects</div>
+
+            <!-- Project One -->
+            <div class="paper-block">
+                <div class="paper-title">
+                    <a href="https://github.com/project1" target="_blank">Distributed Task Engine ↗</a>
                 </div>
-
-                <div class="project-card">
-                    <h3><a href="#" target="_blank">Project Name Two ↗</a></h3>
-                    <p class="project-tech">TypeScript / Next.js / PostgreSQL</p>
-                    <p class="project-desc">An open-source telemetry dashboard that tracks and visualizes server runtime statistics using real-time WebSockets.</p>
+                <div class="paper-authors">Solo Project</div>
+                <div class="paper-venue">Go, Redis, Docker</div>
+                <div class="paper-desc">
+                    A high-throughput task execution engine optimized for microsecond poll latency and concurrent failure mitigation.
                 </div>
-
             </div>
-        </section>
 
-        <!-- TECHNICAL EXPERIENCE MATRIX -->
-        <section class="content-block">
-            <h2>Technical Stack</h2>
-            < flex class="stack-list">
-                <p><strong>Languages:</strong> Go, TypeScript, Python, SQL, Elisp</p>
-                <p><strong>Tools & Infra:</strong> AWS, Docker, Git, Linux, Vercel, PostgreSQL</p>
-            </flex>
-        </section>
-    </main>
+            <!-- Project Two -->
+            <div class="paper-block">
+                <div class="paper-title">
+                    <a href="https://github.com/project2" target="_blank">Telemetry Visualizer ↗</a>
+                </div>
+                <div class="paper-authors">Solo Project</div>
+                <div class="paper-venue">TypeScript, WebSockets, Tailwind</div>
+                <div class="paper-desc">
+                    Real-time dashboard rendering system resource monitoring straight through high-frequency streaming transport layers.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Stack</div>
+            <div class="skills-block">
+                <p><strong>Languages:</strong> Go, TypeScript, Python, SQL, Emacs Lisp</p>
+                <p><strong>Infrastructure:</strong> AWS, Docker, Linux, Git, PostgreSQL, Vercel</p>
+            </div>
+        </div>
+
+        <div id="footer">
+            Design template from <a href="https://github.com/lorenmt/clarity-template" target="_blank">Clarity</a>.
+        </div>
+
+    </div>
 
 </body>
 </html>
