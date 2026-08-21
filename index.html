@@ -5,126 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Huck</title>
 
-    <!-- Core template styling links -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Core Clarity Template Production Stylesheets -->
+    <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.min.css">
+
+    <style>
+        /* Proportional Typography & Grid System Refinements */
+        body {
+            font-size: 14px; /* Establishes clean baseline em units across the document */
+            color: #2c3038;
+            background-color: #fbfbfc;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: #111418;
+            margin-bottom: 2px;
+        }
+
+        /* Elite Slate Blue Accent Section Breaking Rules */
+        h2 {
+            font-size: 1.1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #2b4c7e;
+            border-bottom: 1px solid #eef1f6;
+            padding-bottom: 10px;
+            margin-top: 3.2em;
+            margin-bottom: 1.4em;
+        }
+
+        h3 {
+            font-size: 1.05em;
+            font-weight: 600;
+            color: #111418;
+            letter-spacing: -0.01em;
+        }
+
+        h4 {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #384252;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        p, li {
+            font-size: 0.95em;
+            line-height: 1.7;
+            color: #3e4450;
+            margin-bottom: 1em;
+        }
+
+        /* Interactive Elements */
+        .links a {
+            font-size: 0.95em;
+            color: #2b4c7e;
+            text-decoration: none;
+            transition: color 0.15s ease;
+            font-weight: 500;
+        }
+        .links a:hover {
+            color: #182d4b;
+            text-decoration: underline;
+        }
+
+        /* Data & Tech Badges */
+        .tech-tag {
+            font-family: monospace;
+            font-size: 0.85em;
+            background: #f0f2f5;
+            color: #384252;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 6px;
+            margin-bottom: 8px;
+            border: 1px solid #e1e5eb;
+        }
+
+        .date-badge {
+            font-size: 0.85em;
+            color: #5c6470;
+            font-family: monospace;
+            font-variant-numeric: tabular-nums;
+            background: #eef1f6;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        .exp-card {
+            margin-bottom: 2em;
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 6px;
+            border: 1px solid #eef1f6;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.015);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="container">
-        <div class="blog-title">
+    <!-- Signature Pastel Gradient Top Banner Box -->
+    <div class="container blog" id="first-content" style="background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf7 100%); padding-top: 4.5em; padding-bottom: 4em; border-bottom: 1px solid #eef1f6;">
+        <div class="blog-title no-cover">
             <h1>Thomas Huck</h1>
-            <p class="author-list" style="font-size: 1.15em; color: #444; margin-top: 10px; margin-bottom: 20px; font-weight: 400;">
+            <p class="author-list" style="font-size: 1.15em; color: #4b5565; font-weight: 400; margin-top: 6px; margin-bottom: 24px;">
                 Quantitative Trader & Software Engineer
             </p>
 
-            <div class="links" style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.95em;">
-                <a href="mailto:thomas.a.huck@gmail.com" style="text-decoration: none; color: #111;"><i class="fa-regular fa-envelope"></i> Email</a>
-                <a href="https://github.com" target="_blank" style="text-decoration: none; color: #111;"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com" target="_blank" style="text-decoration: none; color: #111;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <span style="color: #ccc;">|</span>
-                <span style="color: #666;"><i class="fa-solid fa-location-dot"></i> New York, NY</span>
+            <div class="links" style="display: flex; gap: 24px;">
+                <a href="mailto:tahuck2@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Main Content Container -->
-    <main class="container blog">
+    <!-- Layout Grid Matrix Wrapper Container -->
+    <div class="container blog" style="padding-top: 1em;">
 
-        <!-- Biography / Overview -->
-        <section id="about" style="margin-bottom: 50px;">
+        <!-- Biography Summary Section -->
+        <div class="base-row">
             <h2>About Me</h2>
-            <p style="line-height: 1.6; color: #333;">
+            <p style="font-size: 1em; color: #2c3038;">
                 I am a software engineer and quantitative trader working at the intersection of production systems architecture and statistical modeling. My background spans building low-latency algorithmic trading infrastructure, engineering mathematical models, and researching the mechanistic interpretability of transformer networks. I hold a B.S. in Computer Science and Mathematics from Duke University, where I graduated as an Angier B. Duke Scholar.
             </p>
-        </section>
+        </div>
 
-        <!-- Professional Timeline -->
-        <section id="experience" style="margin-bottom: 50px;">
+        <!-- Experience Timeline Row Blocks -->
+        <div class="base-row">
             <h2>Experience</h2>
 
-            <!-- Redwood Research -->
-            <div class="exp-item" style="margin-bottom: 35px;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 5px;">
-                    <h3 style="margin: 0; font-size: 1.2em; font-weight: 600;">AI Safety Research Fellow (REMIX Program)</h3>
-                    <span style="font-size: 0.9em; color: #666; font-variant-numeric: tabular-nums;">Dec 2025 — May 2026</span>
+            <!-- Jane Street Quantitative Trader Frame (Updated Date) -->
+            <div class="exp-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="margin: 0;">Quantitative Trader</h3>
+                    <span class="date-badge">2023.08 — 2026.08</span>
                 </div>
-                <div style="font-size: 0.95em; color: #555; font-style: italic; margin-top: 4px; margin-bottom: 10px;">Redwood Research</div>
-                <p style="margin: 0; font-size: 0.95em; line-height: 1.6; color: #444;">
-                    Conducted research focused on the mechanistic interpretability of transformer-based language models. Designed and implemented causal scrubbing frameworks to isolate and analyze in-context linear regression processes inside transformer layers.
-                </p>
-            </div>
-
-            <!-- Jane Street Full-Time -->
-            <div class="exp-item" style="margin-bottom: 35px;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 5px;">
-                    <h3 style="margin: 0; font-size: 1.2em; font-weight: 600;">Quantitative Trader</h3>
-                    <span style="font-size: 0.9em; color: #666; font-variant-numeric: tabular-nums;">Aug 2023 — July 2025</span>
-                </div>
-                <div style="font-size: 0.95em; color: #555; font-style: italic; margin-top: 4px; margin-bottom: 10px;">Jane Street Capital &bull; New York, NY</div>
-                <p style="margin: 0; font-size: 0.95em; line-height: 1.6; color: #444;">
+                <div style="font-size: 0.95em; color: #5c6470; font-style: italic; margin-top: 3px; margin-bottom: 12px;">Jane Street Capital &bull; New York, NY</div>
+                <p style="margin: 0;">
                     Designed and deployed algorithmic trading software and quantitative research strategies within fixed income and bond markets. Devised and trained core signal models using Python, and engineered robust, production-critical execution systems natively within the firm's OCaml infrastructure.
                 </p>
             </div>
 
-            <!-- Jane Street Intern & Laber Labs -->
-            <div class="exp-item" style="margin-bottom: 35px;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 5px;">
-                    <h3 style="margin: 0; font-size: 1.2em; font-weight: 600;">Undergraduate Research & Internships</h3>
-                    <span style="font-size: 0.9em; color: #666; font-variant-numeric: tabular-nums;">2022 — 2023</span>
+            <!-- Redwood Research REMIX Frame -->
+            <div class="exp-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="margin: 0;">AI Safety Research Fellow (REMIX Program)</h3>
+                    <span class="date-badge">2023.01 — 2023.05</span>
                 </div>
-                <div style="font-size: 0.95em; color: #555; font-style: italic; margin-top: 4px; margin-bottom: 10px;">Jane Street Capital & Duke University</div>
-                <p style="margin: 0; font-size: 0.95em; line-height: 1.6; color: #444;">
-                    <strong>Quantitative Trading Intern (Jane Street, Summer 2022):</strong> Formulated statistical pricing architectures for security baskets, implementing heteroscedasticity prediction components to optimize legacy autoregressive engines.<br style="margin-bottom: 8px;">
+                <div style="font-size: 0.95em; color: #5c6470; font-style: italic; margin-top: 3px; margin-bottom: 12px;">Redwood Research</div>
+                <p style="margin: 0;">
+                    Conducted research focused on the mechanistic interpretability of transformer-based language models. Designed and implemented causal scrubbing frameworks to isolate and analyze in-context linear regression processes inside transformer layers.
+                </p>
+            </div>
+
+            <!-- Undergraduate Research Block -->
+            <div class="exp-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="margin: 0;">Undergraduate Research & Internships</h3>
+                    <span class="date-badge">2022 — 2023</span>
+                </div>
+                <div style="font-size: 0.95em; color: #5c6470; font-style: italic; margin-top: 3px; margin-bottom: 12px;">Jane Street Capital & Duke University</div>
+                <p style="margin: 0;">
+                    <strong>Quantitative Trading Intern (Jane Street, Summer 2022):</strong> Formulated statistical pricing architectures for security baskets, implementing heteroscedasticity prediction components to optimize legacy autoregressive engines.<br style="margin-top: 8px; display: block;">
                     <strong>Research Assistant (Laber Labs, Spring 2022 — May 2023):</strong> Built algorithmic policies for multi-armed bandit strategies to evaluate policy optimization metrics in mobile healthcare initiatives.
                 </p>
             </div>
-        </section>
+        </div>
 
-        <!-- Technical Toolkit -->
-        <section id="skills" style="margin-bottom: 50px;">
+        <!-- Technical Toolkit Two-Column Layout Grid -->
+        <div class="base-row">
             <h2>Technical Toolkit</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; font-size: 0.95em; line-height: 1.7;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-top: 6px;">
                 <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #111;">Languages</strong>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; margin-right: 4px;">Python</code>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; margin-right: 4px;">OCaml</code>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; margin-right: 4px;">C++</code>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; margin-right: 4px;">R</code>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em;">Java</code>
+                    <h4>Languages</h4>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OCaml</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">R</span>
+                    <span class="tech-tag">Java</span>
                 </div>
                 <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #111;">Frameworks & Tools</strong>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; margin-right: 4px;">PyTorch</code>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; margin-right: 4px;">STAN</code>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; margin-right: 4px;">Matlab</code>
-                    <code style="background: #f4f4f5; padding: 3px 6px; border-radius: 4px; font-size: 0.9em;">Git</code>
+                    <h4>Frameworks & Tools</h4>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">STAN</span>
+                    <span class="tech-tag">Matlab</span>
+                    <span class="tech-tag">Git</span>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Academic Foundation -->
-        <section id="education" style="margin-bottom: 50px; border-top: 1px solid #eee; padding-top: 30px;">
+        <!-- Academic Foundation Section -->
+        <div class="base-row" style="margin-bottom: 4em;">
             <h2>Education</h2>
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 5px;">
-                <strong style="font-size: 1.1em; color: #111;">Duke University &mdash; B.S. Computer Science & Mathematics</strong>
-                <span style="font-size: 0.9em; color: #666; font-variant-numeric: tabular-nums;">Graduated May 2023</span>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+                <h3 style="margin: 0;">Duke University &mdash; B.S. Computer Science & Mathematics</h3>
+                <span class="date-badge">Graduated May 2023</span>
             </div>
-            <p style="font-size: 0.95em; color: #444; margin-top: 6px; line-height: 1.5;">
-                Graduated Cum Laude with a 3.97 GPA. Recipient of the Angier B. Duke Scholar flagship merit award.
+            <p style="margin-top: 4px; margin-bottom: 10px;">
+                Graduated <strong>Magna Cum Laude</strong> with a 3.97 GPA. Recipient of the Angier B. Duke Scholar flagship merit award.
             </p>
-            <p style="font-size: 0.85em; color: #666; line-height: 1.5; margin-top: 10px;">
-                <strong>Selected Coursework:</strong> High-Dimensional Data Analysis, Natural Language Processing, Neurosymbolic ML, Graduate Abstract Algebra, Theory & Algorithms of ML, Measure & Integration, Bayesian Statistics.
-            </p>
-        </section>
-
-    </main>
-
-    <!-- Simple Footer -->
-    <footer class="container" style="margin-top: 40px; margin-bottom: 40px; border-top: 1px solid #eee; padding-top: 20px; text-align: center; font-size: 0.85em; color: #888;">
-        <p>&copy; 2026 Thomas Huck.</p>
-    </footer>
-
-</body>
-</html>
+            <p style="font-size: 0.9em; color: #5c6470; line-height: 1.6; margin: 0;">
