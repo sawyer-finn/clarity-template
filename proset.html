@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Proset Engine</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/stylesheets/main_free.css"
+        />
+        <link rel="stylesheet" type="text/css" href="clarity/clarity.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/fontawesome-free-6.6.0-web/css/all.min.css"
+        />
+        <style>
+         details summary {
+             cursor: pointer;
+             color: #2b4c7e;
+             font-weight: 600;
+             outline: none;
+             margin-bottom: 0.5em;
+         }
+         .key-input {
+             width: 40px;
+             text-align: center;
+             font-family: monospace;
+             font-weight: bold;
+             border: 1px solid #e1e5eb;
+             border-radius: 4px;
+             padding: 2px;
+         }
+         .example-box {
+             background: #ffffff;
+             border: 1px solid #eef1f6;
+             padding: 12px;
+             border-radius: 6px;
+             margin-top: 8px;
+             font-family: monospace;
+             font-size: 0.9em;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="container blog" id="first-content">
+            <div class="blog-title no-cover">
+                <h1>Proset Game</h1>
+                <p class="author-list">
+                    Standard 52-Card Linear Independence Solver
+                </p>
+                <div class="links">
+                    <a href="index.html">
+                        <i class="fa-solid fa-arrow-left"></i> Portfolio
+                    </a>
+                    <span style="margin: 0 10px; color: #ccc">|</span>
+                    <span id="deck-count" style="font-family: monospace">
+                        Deck: 52
+                    </span>
+                    <span style="margin: 0 10px; color: #ccc">|</span>
+                    <span id="game-timer" style="font-family: monospace">
+                        Time: 00:00
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container blog">
+            <!-- Expandable Rules Section with Concrete Examples -->
+            <div class="base-row">
+                <details>
+                    <summary>How to Play & Examples (Click to Expand)</summary>
+                    <p>
+                        Proset is a game of mathematical linear independence.
+                        Clear the entire 52-card deck by finding subsets of
+                        cards where
+                        <strong>every single attribute</strong> (each suit and
+                        rank bit) appears an
+                        <strong>even number of times</strong> across your
+                        selections.
+                    </p>
+
+                    <div class="example-box">
+                        <strong>Example 1: Suit Matching (Simple Pair)</strong
+                                                                      ><br />
+                        • Card A: 4 of Clubs<br />
+                        • Card B: 4 of Clubs<br />
+                        Result: Valid! Both 'Clubs' and '4' appear exactly twice
+                        (even).
+                    </div>
+
+                    <div class="example-box">
+                        <strong
+                        >Example 2: Bitwise Rank Cancellation (3-Card
+                            Set)</strong
+                                ><br />
+                        • Card A: 5 of Spades (5 in binary = 0101)<br />
+                        • Card B: 4 of Spades (4 in binary = 0100)<br />
+                        • Card C: Ace of Spades (1 in binary = 0001)<br />
+                        Result: Valid Set!<br />
+                        - Suits: Spades appears 3 times (In standard card
+                        Proset, suits map to a 2-bit mask: Spades = 11. Adding
+                        11 + 11 + 11 bitwise results in 11, balancing out evenly
+                        relative to baseline parameters).<br />
+                        - Ranks: Bitwise XOR sum of the ranks is 0101 ^ 0100 ^
+                        0001 = 0000 (Even cancellation).
+                    </div>
+                </details>
+            </div>
+
+            <!-- Custom Hotkey rebinding panel -->
+            <div class="base-row">
+                <details>
+                    <summary>Configure Keyboard Hotkeys</summary>
+                    <p
+                        style="
+                               font-size: 0.9em;
+                               color: #666;
+                               margin-bottom: 10px;
+                               "
+                    >
+                        Click a box and press any key to rebind that position
+                        slot.
+                    </p>
+                    <div
+                        id="hotkey-config"
+                        style="display: flex; flex-wrap: wrap; gap: 10px"
+                    ></div>
+                </details>
+            </div>
+
+            <!-- Permanent Personal Bests Header Section -->
+            <div class="base-row" id="leaderboard-section">
+                <h3>Personal Bests</h3>
+                <ol id="leaderboard" style="font-family: monospace"></ol>
+            </div>
+
+            <!-- The Table Area Split Into Asymmetric Rows -->
+            <div class="base-row" style="margin-top: 2em; margin-bottom: 2em">
+                <h2>The Table</h2>
+
+                <!-- Row 1: Max 4 Cards -->
+                <div
+                    id="row-top"
+                    style="
+                        display: flex;
+                        gap: 15px;
+                        margin-bottom: 15px;
+                        width: 100%;
+                        "
+                ></div>
+
+                <!-- Row 2: Max 3 Cards, Indented slightly for visual elegance -->
+                <div
+                    id="row-bottom"
+                    style="
+                        display: flex;
+                        gap: 15px;
+                        margin-bottom: 2em;
+                        width: 100%;
+                        padding-left: 55px;
+                        "
+                ></div>
+
+                <div style="display: flex; align-items: center; gap: 20px">
+                    <span
+                        id="status"
+                        style="font-family: monospace; color: #666"
+                    >
+                        Select cards to begin.
+                    </span>
+                </div>
+            </div>
+
+            <fieldset class="footnote">
+                <p>&copy; 2026 Thomas Huck.</p>
+            </fieldset>
+        </div>
+
+        <script src="proset-engine.js"></script>
+    </body>
+</html>
